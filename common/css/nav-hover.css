@@ -1,0 +1,45 @@
+/*
+ * CSS-only submenu hover — no JavaScript needed.
+ * Overrides SmartMenus/Elementor JS-set display:none on hover.
+ */
+
+/* ── Desktop: show dropdown when parent <li> is hovered ── */
+.elementor-nav-menu--main li.menu-item-has-children:hover
+  > ul.elementor-nav-menu--dropdown {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  /* position already set to absolute by elementor styles */
+  top: 100% !important;
+  left: 0 !important;
+  z-index: 9999 !important;
+  min-width: 200px;
+}
+
+/* Keep parent <li> positioned so the absolute child is anchored to it */
+.elementor-nav-menu--main li.menu-item-has-children {
+  position: relative;
+}
+
+/* ── Arrow rotation feedback on hover ── */
+.elementor-nav-menu--main li.menu-item-has-children:hover
+  > a .sub-arrow i {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+/* ── Hide dropdown by default (in case JS is absent and never runs) ── */
+.elementor-nav-menu--main ul.elementor-nav-menu--dropdown {
+  display: none;
+  position: absolute;
+}
+
+/* ── Mobile: show dropdown when parent <li> is hovered (touch: :focus-within) ── */
+.elementor-nav-menu--dropdown li.menu-item-has-children:hover
+  > ul.elementor-nav-menu--dropdown,
+.elementor-nav-menu--dropdown li.menu-item-has-children:focus-within
+  > ul.elementor-nav-menu--dropdown {
+  display: block !important;
+  position: static !important;
+}
