@@ -82,7 +82,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(59, 130, 246, 0.9) 100%), url('images/6-2-scaled-e1768633679137.jpg'); background-size: cover; background-position: center;">
+    <section class="hero" style="background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(59, 130, 246, 0.9) 100%); position: relative; overflow: hidden;">
+        <!-- Animated Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 80%, white 1px, transparent 1px); background-size: 50px 50px; animation: movePattern 20s linear infinite;"></div>
+        <style>
+            @keyframes movePattern {
+                0% { background-position: 0 0, 25px 25px; }
+                100% { background-position: 50px 50px, 75px 75px; }
+            }
+        </style>
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
@@ -252,12 +260,7 @@
                 <h2 class="section-title">We help Making your dream into Reality</h2>
             </div>
 
-            <!-- Office Image -->
-            <div style="text-align: center; margin: 40px 0;">
-                <img src="images/DSC1119-1024x683.jpg" alt="Saarglobal Office" style="max-width: 900px; width: 100%; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.2);">
-            </div>
-
-            <div class="about-content">
+            <div class="about-content" style="max-width: 1000px; margin: 0 auto;">
                 <p>Saarglobal is of the opinion that value is derived from services and services obtained by satisfying client expectations with accurate performance and prompt visa results.</p>
                 <div class="about-features">
                     <div class="about-feature">
@@ -472,19 +475,28 @@
                 <h2 class="section-title">We ensure prompt services for visa & Immigration</h2>
             </div>
 
-            <!-- Process Images -->
+            <!-- Process Steps -->
             <div style="display: flex; justify-content: center; gap: 30px; margin: 40px 0; flex-wrap: wrap;">
-                <div style="text-align: center;">
-                    <img src="images/process-1-263x263.jpg" alt="Step 1" style="width: 250px; height: 250px; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 5px solid #1e40af;">
-                    <h4 style="margin-top: 15px; color: #1e40af;">Consultation</h4>
+                <div style="text-align: center; max-width: 250px;">
+                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);">
+                        <i class="fas fa-comments" style="font-size: 50px; color: white;"></i>
+                    </div>
+                    <h4 style="margin-top: 15px; color: #1e40af; font-size: 20px; font-weight: 700;">Step 1: Consultation</h4>
+                    <p style="color: #6b7280; margin-top: 10px; line-height: 1.6;">Initial consultation to understand your goals and eligibility</p>
                 </div>
-                <div style="text-align: center;">
-                    <img src="images/process-2-263x263.jpg" alt="Step 2" style="width: 250px; height: 250px; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 5px solid #3b82f6;">
-                    <h4 style="margin-top: 15px; color: #3b82f6;">Documentation</h4>
+                <div style="text-align: center; max-width: 250px;">
+                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);">
+                        <i class="fas fa-file-alt" style="font-size: 50px; color: white;"></i>
+                    </div>
+                    <h4 style="margin-top: 15px; color: #3b82f6; font-size: 20px; font-weight: 700;">Step 2: Documentation</h4>
+                    <p style="color: #6b7280; margin-top: 10px; line-height: 1.6;">Comprehensive document preparation and verification</p>
                 </div>
-                <div style="text-align: center;">
-                    <img src="images/process-3-263x263.jpg" alt="Step 3" style="width: 250px; height: 250px; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 5px solid #fbbf24;">
-                    <h4 style="margin-top: 15px; color: #fbbf24;">Visa Approval</h4>
+                <div style="text-align: center; max-width: 250px;">
+                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #fbbf24 0%, #fcd34d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);">
+                        <i class="fas fa-check-circle" style="font-size: 50px; color: white;"></i>
+                    </div>
+                    <h4 style="margin-top: 15px; color: #fbbf24; font-size: 20px; font-weight: 700;">Step 3: Approval</h4>
+                    <p style="color: #6b7280; margin-top: 10px; line-height: 1.6;">Successful visa approval and travel preparation</p>
                 </div>
             </div>
 
@@ -548,35 +560,35 @@
                 <p style="max-width: 800px; margin: 0 auto; color: var(--text-light); font-size: 17px; line-height: 1.8;">Our clients experiences reflect the trust they place in Saarglobal. From education planning to visa assistance, we remain committed to providing clear guidance, timely support, and a smooth application journey for every individual.</p>
             </div>
 
-            <!-- Success Stories Images with Overlay -->
-            <div class="success-stories-grid">
-                <div class="story-image-wrapper">
-                    <img src="images/stories1.jpg" alt="Success Story 1">
-                    <div class="story-overlay">
-                        <h4>UK Student Visa</h4>
-                        <p>Successfully approved</p>
+            <!-- Success Achievements -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin: 40px 0;">
+                <div style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); padding: 40px 30px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(30, 64, 175, 0.2); transition: transform 0.3s ease;">
+                    <div style="width: 80px; height: 80px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-graduation-cap" style="font-size: 40px; color: white;"></i>
                     </div>
+                    <h4 style="color: white; font-size: 20px; font-weight: 700; margin-bottom: 10px;">UK Student Visa</h4>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 15px;">Successfully approved for top universities</p>
                 </div>
-                <div class="story-image-wrapper">
-                    <img src="images/stories2.jpg" alt="Success Story 2">
-                    <div class="story-overlay">
-                        <h4>Canada Study Permit</h4>
-                        <p>Dream achieved</p>
+                <div style="background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 40px 30px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2); transition: transform 0.3s ease;">
+                    <div style="width: 80px; height: 80px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-maple-leaf" style="font-size: 40px; color: white;"></i>
                     </div>
+                    <h4 style="color: white; font-size: 20px; font-weight: 700; margin-bottom: 10px;">Canada Study Permit</h4>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 15px;">Dreams achieved with expert guidance</p>
                 </div>
-                <div class="story-image-wrapper">
-                    <img src="images/stories3.jpg" alt="Success Story 3">
-                    <div class="story-overlay">
-                        <h4>Australia PR</h4>
-                        <p>New beginning</p>
+                <div style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); padding: 40px 30px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(5, 150, 105, 0.2); transition: transform 0.3s ease;">
+                    <div style="width: 80px; height: 80px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-home" style="font-size: 40px; color: white;"></i>
                     </div>
+                    <h4 style="color: white; font-size: 20px; font-weight: 700; margin-bottom: 10px;">Australia PR</h4>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 15px;">New beginning in the land down under</p>
                 </div>
-                <div class="story-image-wrapper">
-                    <img src="images/stories4.jpg" alt="Success Story 4">
-                    <div class="story-overlay">
-                        <h4>USA Work Visa</h4>
-                        <p>Career milestone</p>
+                <div style="background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); padding: 40px 30px; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2); transition: transform 0.3s ease;">
+                    <div style="width: 80px; height: 80px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-briefcase" style="font-size: 40px; color: white;"></i>
                     </div>
+                    <h4 style="color: white; font-size: 20px; font-weight: 700; margin-bottom: 10px;">USA Work Visa</h4>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 15px;">Career milestone reached successfully</p>
                 </div>
             </div>
 
