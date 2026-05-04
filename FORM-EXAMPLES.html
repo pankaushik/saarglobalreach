@@ -1,0 +1,264 @@
+<!-- 
+    HOW TO ADD EMAIL FUNCTIONALITY TO ANY PAGE
+    ==========================================
+    
+    This file shows examples of how to add email sending to any page
+    using the reusable form-handler.js
+-->
+
+<!-- ============================================
+     EXAMPLE 1: APPOINTMENT FORM (Like FAQ Page)
+     ============================================ -->
+
+<!-- Step 1: Add EmailJS SDK in <head> section -->
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/faq-styles.css">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<!-- Step 2: Add form with id="appointmentForm" -->
+<form class="appointment-form" id="appointmentForm">
+    <div class="form-row">
+        <div class="form-group">
+            <label><i class="fas fa-user"></i> Full Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+            <label><i class="fas fa-phone"></i> Phone Number</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label><i class="fas fa-envelope"></i> Email Address</label>
+            <input type="email" placeholder="your.email@example.com" required>
+        </div>
+        <div class="form-group">
+            <label><i class="fas fa-calendar-alt"></i> Preferred Date</label>
+            <input type="date" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label><i class="fas fa-globe"></i> Destination Country</label>
+            <select required>
+                <option value="">Select your destination</option>
+                <option value="uk">United Kingdom</option>
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="new-zealand">New Zealand</option>
+                <option value="germany">Germany</option>
+                <option value="cyprus">Cyprus</option>
+                <option value="other">Other European Countries</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label><i class="fas fa-briefcase"></i> Service Type</label>
+            <select required>
+                <option value="">Select service you need</option>
+                <option value="visitor-visa">Visitor Visa</option>
+                <option value="student-visa">Student Visa</option>
+                <option value="work-visa">Work Visa</option>
+                <option value="business-visa">Business Visa</option>
+                <option value="ielts-coaching">IELTS Coaching</option>
+                <option value="pte-coaching">PTE Coaching</option>
+                <option value="general-consultation">General Consultation</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label><i class="fas fa-comment-dots"></i> Additional Information</label>
+        <textarea placeholder="Tell us more about your requirements..." rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="btn-appointment">
+        <i class="fas fa-paper-plane"></i> Book Appointment Now
+    </button>
+</form>
+
+<!-- Step 3: Include scripts before </body> -->
+<script src="js/main.js"></script>
+<script src="js/form-handler.js"></script>
+
+
+<!-- ============================================
+     EXAMPLE 2: SIMPLE CONTACT FORM
+     ============================================ -->
+
+<!-- Step 1: Add EmailJS SDK in <head> (same as above) -->
+
+<!-- Step 2: Add form with id="contactForm" -->
+<form id="contactForm" class="contact-form">
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" id="name" placeholder="John Doe" required>
+    </div>
+
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" id="email" placeholder="john@example.com" required>
+    </div>
+
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" id="phone" placeholder="+91 XXXXX XXXXX">
+    </div>
+
+    <div class="form-group">
+        <label>Subject</label>
+        <input type="text" name="subject" id="subject" placeholder="How can we help you?">
+    </div>
+
+    <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" id="message" rows="5" placeholder="Your message here..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i> Send Message
+    </button>
+</form>
+
+<!-- Step 3: Include scripts before </body> (same as above) -->
+
+
+<!-- ============================================
+     EXAMPLE 3: CUSTOM FORM (Advanced)
+     ============================================ -->
+
+<!-- If you want to create a completely custom form, 
+     you can use the sendAppointmentEmail function directly -->
+
+<form id="myCustomForm">
+    <!-- Your custom fields here -->
+    <input type="text" id="customName" placeholder="Name" required>
+    <input type="email" id="customEmail" placeholder="Email" required>
+    <textarea id="customMessage" placeholder="Message" required></textarea>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById('myCustomForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Prepare custom data
+    const formData = {
+        from_name: document.getElementById('customName').value,
+        email: document.getElementById('customEmail').value,
+        message: document.getElementById('customMessage').value,
+        to_email: 'saarglobalreach@gmail.com'
+    };
+    
+    // Use the reusable function
+    sendAppointmentEmail(formData, 
+        function(response) {
+            // Success callback
+            alert('Message sent successfully!');
+            document.getElementById('myCustomForm').reset();
+        },
+        function(error) {
+            // Error callback
+            alert('Failed to send message. Please try again.');
+        }
+    );
+});
+</script>
+
+
+<!-- ============================================
+     STYLING TIPS
+     ============================================ -->
+
+<!-- 
+The form-handler.js automatically handles:
+✓ Loading states (spinner on button)
+✓ Success states (green button with checkmark)
+✓ Error states (red button with X)
+✓ Notifications (top-right popup)
+
+For the notification styles to work, make sure to include:
+<link rel="stylesheet" href="css/faq-styles.css">
+
+This contains:
+- .email-notification styles
+- .email-notification.success
+- .email-notification.error
+- .email-notification.warning
+- .email-notification.info
+-->
+
+
+<!-- ============================================
+     TESTING CHECKLIST
+     ============================================ -->
+
+<!-- 
+Before going live, test these scenarios:
+
+1. ✓ Fill all required fields and submit
+   → Should see loading spinner
+   → Should see success notification
+   → Should receive email
+   → Form should reset
+
+2. ✓ Submit empty form
+   → Should show browser validation
+   → Should show warning notification
+
+3. ✓ Submit with invalid email
+   → Should show browser validation
+
+4. ✓ Submit with incorrect EmailJS config
+   → Should show error notification
+   → Should see error in browser console
+
+5. ✓ Test notification close button
+   → Click X to close notification
+
+6. ✓ Test on mobile devices
+   → Notifications should be responsive
+   → Form should be mobile-friendly
+-->
+
+
+<!-- ============================================
+     TROUBLESHOOTING
+     ============================================ -->
+
+<!-- 
+Problem: Form submits but no email received
+Solution: 
+- Check EmailJS dashboard for sent emails
+- Verify Service ID, Template ID, and Public Key
+- Check spam folder
+- Ensure email service is properly connected in EmailJS
+
+Problem: "EmailJS is not loaded" error
+Solution:
+- Verify EmailJS SDK script is included in <head>
+- Check browser console for script loading errors
+- Try using CDN link from emailjs.com
+
+Problem: Notification not showing
+Solution:
+- Ensure css/faq-styles.css is included
+- Check if notification styles are loaded
+- Look for CSS conflicts
+
+Problem: Button not changing color
+Solution:
+- Ensure button has class="btn-appointment" for appointment forms
+- Check CSS is properly loaded
+- Verify no CSS conflicts
+
+For more help, check:
+- EMAIL-SETUP-GUIDE.md (detailed setup)
+- SETUP-CHECKLIST.txt (quick reference)
+- js/form-handler.js (code comments)
+-->

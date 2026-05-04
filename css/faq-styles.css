@@ -822,3 +822,115 @@
     transform: translateX(3px) scale(1.1);
     box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
 }
+
+/* ========================================
+   EMAIL NOTIFICATION STYLES
+   ======================================== */
+.email-notification {
+    position: fixed;
+    top: -100px;
+    right: 20px;
+    background: white;
+    color: #1f2937;
+    padding: 18px 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 450px;
+    min-width: 320px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-left: 5px solid #3b82f6;
+}
+
+.email-notification.show {
+    top: 100px;
+}
+
+.email-notification.success {
+    border-left-color: #10b981;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.email-notification.success i {
+    color: #10b981;
+}
+
+.email-notification.error {
+    border-left-color: #ef4444;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+}
+
+.email-notification.error i {
+    color: #ef4444;
+}
+
+.email-notification.warning {
+    border-left-color: #f59e0b;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+.email-notification.warning i {
+    color: #f59e0b;
+}
+
+.email-notification.info {
+    border-left-color: #3b82f6;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.email-notification.info i {
+    color: #3b82f6;
+}
+
+.email-notification > i {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.email-notification span {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+.notification-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #1f2937;
+}
+
+.notification-close i {
+    font-size: 14px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .email-notification {
+        right: 10px;
+        left: 10px;
+        max-width: calc(100% - 20px);
+        min-width: auto;
+    }
+
+    .email-notification.show {
+        top: 80px;
+    }
+}
