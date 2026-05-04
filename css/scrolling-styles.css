@@ -1,0 +1,266 @@
+/* ========================================
+   SCROLLING SECTIONS
+   ======================================== */
+
+/* Success Stories Scrolling Section */
+.scrolling-section {
+    margin: 80px 0;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 20px;
+}
+
+.scroll-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 20px 60px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--bg-light);
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-track {
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 10px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+.scroll-item {
+    flex: 0 0 350px;
+    height: 400px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.scroll-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(30, 64, 175, 0.25);
+}
+
+.scroll-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.scroll-item:hover img {
+    transform: scale(1.1);
+}
+
+.scroll-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(30, 64, 175, 0.95) 0%, rgba(30, 64, 175, 0.7) 100%);
+    padding: 25px 20px;
+    color: var(--white);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.scroll-item:hover .scroll-caption {
+    transform: translateY(0);
+}
+
+.scroll-caption h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+
+.scroll-caption p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Scroll Navigation Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+}
+
+.scroll-btn i {
+    font-size: 20px;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.scroll-btn:hover i {
+    color: var(--white);
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+/* Horizontal Scroll for Process Images */
+.process-images-scroll {
+    margin: 80px 0;
+    padding: 60px 0;
+    background: var(--bg-light);
+    border-radius: 20px;
+}
+
+.horizontal-scroll {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 30px 40px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background: rgba(30, 64, 175, 0.1);
+    border-radius: 10px;
+    margin: 0 40px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 10px;
+}
+
+.horizontal-scroll-item {
+    flex: 0 0 300px;
+    position: relative;
+    text-align: center;
+}
+
+.horizontal-scroll-item img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border: 6px solid var(--white);
+    transition: all 0.4s ease;
+}
+
+.horizontal-scroll-item:hover img {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 20px 60px rgba(30, 64, 175, 0.3);
+    border-color: var(--primary-color);
+}
+
+.scroll-label {
+    margin-top: 20px;
+}
+
+.step-badge {
+    display: inline-block;
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+}
+
+.scroll-label h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 10px;
+}
+
+/* Scroll Animation */
+@keyframes scrollFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scroll-item, .horizontal-scroll-item {
+    animation: scrollFadeIn 0.6s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .scroll-item {
+        flex: 0 0 280px;
+        height: 350px;
+    }
+    
+    .horizontal-scroll-item {
+        flex: 0 0 250px;
+    }
+    
+    .horizontal-scroll-item img {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .scroll-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .scroll-btn i {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,546 @@
+/* ========================================
+   WORK VISA TYPES SECTION STYLING
+   ======================================== */
+
+/* Header Section */
+.work-visa-types {
+    margin: 80px 0;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f9fafb 0%, #f0f9ff 100%);
+    border-radius: 30px;
+}
+
+.work-visa-types-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.work-visa-types-header h3 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 17px;
+    color: #6b7280;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Visa Stats Overview */
+.visa-stats-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.visa-stat-box {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.visa-stat-box:hover {
+    transform: translateY(-8px);
+    border-color: #1e40af;
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.15);
+}
+
+.stat-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    transition: transform 0.4s ease;
+}
+
+.visa-stat-box:hover .stat-icon-wrapper {
+    transform: rotate(360deg);
+}
+
+.stat-icon-wrapper i {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.visa-stat-box h5 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e40af;
+    margin-bottom: 8px;
+}
+
+.visa-stat-box p {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Visa Types Grid */
+.visa-types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.visa-type-card.enhanced {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.visa-type-card.enhanced:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 60px rgba(30, 64, 175, 0.2);
+    border-color: #1e40af;
+}
+
+/* Featured Card */
+.visa-type-card.featured {
+    border: 3px solid #1e40af;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.featured-corner-ribbon {
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    padding: 8px 45px;
+    transform: rotate(45deg);
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+    z-index: 1;
+}
+
+/* Card Header */
+.visa-card-header {
+    padding: 35px 30px 25px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.visa-icon-large {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+    transition: all 0.4s ease;
+}
+
+.visa-type-card.enhanced:hover .visa-icon-large {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 15px 50px rgba(30, 64, 175, 0.5);
+}
+
+/* Badges */
+.visa-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.visa-badge.popular {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff;
+}
+
+.visa-badge.corporate {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: #ffffff;
+}
+
+.visa-badge.premium {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+}
+
+.visa-badge.flexible {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    color: #ffffff;
+}
+
+/* Card Body */
+.visa-card-body {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.visa-card-body h4 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1f2937;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.visa-type-card.enhanced:hover .visa-card-body h4 {
+    color: #1e40af;
+}
+
+.visa-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Visa Highlights */
+.visa-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.highlight-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 10px;
+    border-left: 3px solid #1e40af;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.highlight-box i {
+    color: #1e40af;
+    font-size: 16px;
+}
+
+/* Requirements Mini */
+.visa-requirements-mini {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+}
+
+.visa-requirements-mini h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.visa-requirements-mini h5 i {
+    color: #1e40af;
+}
+
+.visa-requirements-mini ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.visa-requirements-mini li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #1f2937;
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.visa-requirements-mini li:last-child {
+    border-bottom: none;
+}
+
+.visa-requirements-mini i {
+    color: #10b981;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Special Note */
+.special-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 10px;
+    border-left: 4px solid #f59e0b;
+}
+
+.special-note i {
+    color: #d97706;
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.special-note span {
+    font-size: 13px;
+    color: #92400e;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Country Flags */
+.country-flags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 2px solid #e5e7eb;
+}
+
+.country-flags img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.country-flags img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.3);
+    border-color: #1e40af;
+}
+
+/* Card Footer */
+.visa-card-footer {
+    padding: 0 30px 30px;
+}
+
+.visa-apply-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px 30px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.3);
+    transition: all 0.3s ease;
+}
+
+.visa-apply-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.4);
+}
+
+.visa-apply-btn.premium-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f2937;
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.3);
+}
+
+.visa-apply-btn.premium-btn:hover {
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+}
+
+.visa-apply-btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.visa-apply-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Footer Info Box */
+.visa-types-footer {
+    padding: 0 20px;
+}
+
+.info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 16px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+}
+
+.info-box > i {
+    font-size: 42px;
+    color: #fbbf24;
+    flex-shrink: 0;
+}
+
+.info-box h5 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.info-box p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.inline-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fbbf24;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.inline-link:hover {
+    gap: 12px;
+    color: #fde68a;
+}
+
+.inline-link i {
+    transition: transform 0.3s ease;
+}
+
+.inline-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .visa-types-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 968px) {
+    .visa-stats-overview {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .visa-types-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .visa-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-visa-types {
+        margin: 50px 0;
+        padding: 40px 15px;
+        border-radius: 20px;
+    }
+    
+    .work-visa-types-header h3 {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 15px;
+    }
+    
+    .visa-stats-overview {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .visa-stat-box {
+        padding: 25px 15px;
+    }
+    
+    .visa-types-grid {
+        padding: 0 10px;
+    }
+    
+    .visa-card-header {
+        padding: 25px 20px 20px;
+    }
+    
+    .visa-icon-large {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+    
+    .visa-card-body {
+        padding: 20px;
+    }
+    
+    .visa-card-body h4 {
+        font-size: 20px;
+    }
+    
+    .info-box {
+        flex-direction: column;
+        padding: 25px 20px;
+    }
+    
+    .info-box > i {
+        font-size: 32px;
+    }
+}
