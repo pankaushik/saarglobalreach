@@ -1,13 +1,40 @@
 /* FAQ PAGE STYLES */
 
+/* Video Background for Page Header */
+.header-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.7) 0%, rgba(239, 68, 68, 0.6) 100%);
+    z-index: 1;
+}
+
 /* Page Header */
 .page-header {
     background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
     color: white;
-    padding: 80px 0 60px;
+    padding: 120px 0 100px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 400px;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
 }
 
 .page-header::before {
@@ -33,6 +60,7 @@
     top: 20%;
     left: -100px;
     animation: flyAcross1 25s linear infinite;
+    z-index: 1;
 }
 
 .page-header .plane-1,
@@ -41,7 +69,7 @@
     position: absolute;
     font-size: 65px;
     color: rgba(255, 255, 255, 0.12);
-    z-index: 0;
+    z-index: 1;
 }
 
 .page-header .plane-1 {
@@ -74,7 +102,7 @@
     position: absolute;
     font-size: 50px;
     color: rgba(255, 255, 255, 0.08);
-    z-index: 0;
+    z-index: 1;
 }
 
 .page-header .cloud-1 {
