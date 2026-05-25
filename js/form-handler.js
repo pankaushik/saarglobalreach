@@ -102,7 +102,7 @@ function handleAppointmentForm(e) {
         email: form.querySelector('input[type="email"]')?.value || '',
         preferred_date: form.querySelector('input[type="date"]')?.value || '',
         destination: form.querySelector('select[required]:nth-of-type(1)')?.selectedOptions[0]?.text || '',
-        service: form.querySelector('select[required]:nth-of-type(2)')?.selectedOptions[0]?.text || '',
+        service: form.querySelector('#servicetype')?.selectedOptions[0]?.text || '',
         message: form.querySelector('textarea')?.value || 'No additional information provided',
         to_email: 'pankaushik@gmail.com'//'saarglobalreach@gmail.com'
     };
