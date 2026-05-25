@@ -45,7 +45,7 @@ function sendAppointmentEmail(formData, onSuccess, onError) {
     submitButton.disabled = true;
 
     // Send email using EmailJS
-    emailjs.send(EMAIL_CONFIG.serviceID, EMAIL_CONFIG.templateID, formData)
+    emailjs.send(EMAIL_CONFIG.serviceID, 'template_zyvh356', formData)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             
@@ -54,7 +54,7 @@ function sendAppointmentEmail(formData, onSuccess, onError) {
             submitButton.style.backgroundColor = '#10b981';
             
             // Show success message
-            showNotification('Success! Your appointment request has been sent. We will contact you within 24 hours.', 'success');
+            showNotification('Success! Your message has been sent. We will contact you within 24 hours.', 'success');
             
             // Reset button after 3 seconds
             setTimeout(() => {
