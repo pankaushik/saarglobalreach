@@ -104,7 +104,7 @@ function handleAppointmentForm(e) {
         destination: form.querySelector('select[required]:nth-of-type(1)')?.selectedOptions[0]?.text || '',
         service: form.querySelector('select[required]:nth-of-type(2)')?.selectedOptions[0]?.text || '',
         message: form.querySelector('textarea')?.value || 'No additional information provided',
-        to_email: 'saarglobalreach@gmail.com'
+        to_email: 'pankaushik@gmail.com'//'saarglobalreach@gmail.com'
     };
     
     // Validate required fields
@@ -139,7 +139,7 @@ function handleContactForm(e) {
         email: form.querySelector('input[name="email"], #email')?.value || '',
         subject: form.querySelector('input[name="subject"], #subject')?.value || 'Contact Form Submission',
         message: form.querySelector('textarea[name="message"], #message')?.value || '',
-        to_email: 'saarglobalreach@gmail.com'
+        to_email: 'pankaushik@gmail.com'//'saarglobalreach@gmail.com'
     };
     
     // Validate required fields
