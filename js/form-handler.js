@@ -45,7 +45,7 @@ function sendAppointmentEmail(formData, onSuccess, onError) {
     submitButton.disabled = true;
 
     // Send email using EmailJS
-    emailjs.send(EMAIL_CONFIG.serviceID, 'template_zyvh356', formData)
+    emailjs.send(EMAIL_CONFIG.serviceID, EMAIL_CONFIG.templateID, formData)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             
@@ -155,7 +155,7 @@ function handleContactForm(e) {
     submitButton.disabled = true;
     
     // Send email
-    emailjs.send(EMAIL_CONFIG.serviceID, EMAIL_CONFIG.templateID, formData)
+    emailjs.send(EMAIL_CONFIG.serviceID, 'template_zyvh356', formData)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             submitButton.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
